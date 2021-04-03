@@ -1,8 +1,13 @@
-const {createClient, index, init, search} = require('./lib/elasticsearch')
+const {
+  connect,
+  connectSimple,
+  index,
+  search,
+} = require("./lib/elasticsearch");
 
 module.exports = {
   search,
-  setup: init,
-  createSearchClient: createClient,
-  indexDocument: index
-}
+  connect,
+  connectSimple,
+  indexDocument: index,
+};
